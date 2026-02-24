@@ -18,7 +18,7 @@ public class Main {
 
         Carro[] carros = new Carro[Quantidade];
 
-        for(int i = 0; i < Quantidade; i++) {
+        for(int i = 0; i < carros.length; i++) {
             Carro carro = new Carro();
             System.out.println("Digite o modelo do carro " + (i + 1) + ": ");
             carro.modelo = input.nextLine();
@@ -29,10 +29,15 @@ public class Main {
             carros[i] = carro;
         }
 
+        System.out.println();
+
         for(int i = 0; i < Quantidade; i++) {
             System.out.println(carros[i].modelo + " " + carros[i].valor);
             soma += carros[i].valor;
         }
+
+        System.out.println();
+
         System.out.println("Quantidade de carros: " + carros.length);
         System.out.println("Soma dos valores: " + soma);
     }
